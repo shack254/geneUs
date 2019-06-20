@@ -67,7 +67,6 @@ function sickleCell() {
             var percentage = proportion * 100
             var result = Math.round(percentage)
             sort()
-            debugger;
             alert(result + "%")
         }
     }
@@ -83,7 +82,6 @@ function cystic() {
             var percentage = proportion * 100;
             var result = Math.round(percentage);
             sort()
-            debugger;
             alert(result+ "%");
         }
        
@@ -121,6 +119,16 @@ function cystic() {
         return (result);
 
     }
+    function Chart(name ,lables,datasets,data ,options,legend ,layout){
+        this.name = name;
+        this.lables = lables;
+        this.datasets = datasets;
+        this.data = data ;
+        this.options = options;
+        this.legend = legend;
+        this.layout = layout;
+    }
+
     function chartUp(){
         topCodons.forEach(function(codon){
             popChart.data.labels.push(codon[0])
